@@ -4,11 +4,8 @@ from datetime import datetime
 import models
 
 class BaseModel():
-    """ base class model for AirBnB objects
-    Attributes:
-        id: str, unique UUID of instance
-        created_at: datetime, time of instance creation
-        updated_at: datetime, instance update time
+    """
+    base class model for airbnb objects
     """
     def __init__(self, *args, **kwargs):
         """ initializes class with id and created at time"""
