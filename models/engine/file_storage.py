@@ -14,6 +14,7 @@ class FileStorage():
 
     def all(self):
         """All"""
+        return FileStorage.__objects
 
     def new(self, obj):
         """Sets a object"""
