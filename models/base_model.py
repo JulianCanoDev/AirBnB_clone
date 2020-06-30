@@ -3,6 +3,7 @@ import uuid
 from datetime import datetime
 import models
 
+
 class BaseModel():
     """
     base class model for airbnb objects
@@ -26,7 +27,8 @@ class BaseModel():
 
     def __str__(self):
         """Updates instance"""
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(
+            self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
         """Save a state"""

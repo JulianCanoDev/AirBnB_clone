@@ -6,11 +6,20 @@ import cmd
 import models
 from models.base_model import BaseModel
 from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 from models import storage
 import re
 
 
-classes = {"BaseModel": BaseModel, "User": User}
+classes = {
+            "BaseModel": BaseModel,
+            "User": User, "State": State,
+            "City": City, "Amenity": Amenity,
+            "Place": Place, "Review": Review}
 
 
 class HBNBCommand(cmd.Cmd):
@@ -84,8 +93,8 @@ class HBNBCommand(cmd.Cmd):
         elif arg.split()[0] not in classes.keys():
             print("** class doesn't exist **")
         else:
-            msg = arg.split()[0]
-            my_list = [str(objs[key]) for key in objs if key.split(".")[0] == msg]
+            m = arg.split()[0]
+            my_list = [str(objs[key])for key in objs if key.split(".")[0] == m]
 
     def do_update(self, arg):
         """Update a instance"""
@@ -117,7 +126,8 @@ class HBNBCommand(cmd.Cmd):
                             val = [w for w in val if w.strip()]
                             val = val[3].strip('"')
                             setattr(objs[msg], arg.split()[2], val)
-                        storage.save()
+                        objs[msg].save()
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
