@@ -3,6 +3,7 @@
 This module has one class: FileStorage
 """
 from models.base_model import BaseModel
+from models.user import User
 import json
 
 class FileStorage():
