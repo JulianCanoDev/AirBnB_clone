@@ -53,6 +53,7 @@
     top: 9%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    margin-bottom: 0;
 }
 .filters h4
 {
@@ -64,4 +65,5 @@
     bottom: 9%;
     -ms-transform: translateY(-50%);
     transform: translateY(50%);
+    margin-top: 0;
 }
