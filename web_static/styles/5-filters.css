@@ -7,7 +7,7 @@
     border: 1px solid #DDDDDD;
     border-radius: 4px;
 }
-button
+.filters button
 {
     position: absolute;
     font-size: 18px;
@@ -21,11 +21,11 @@ button
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-button:hover
+.filters button:hover
 {
     opacity: 90%;
 }
-button span
+.filters button span
 {
     color: #FFFFFF;
 }
@@ -46,12 +46,22 @@ button span
 }
 .filters h3
 {
+    position: absolute;
     color: black;
-    font-weight: 600px;
+    font-weight: 600;
+    left: 40px;
+    top: 9%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 .filters h4
 {
+    position: absolute;
     color: black;
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 14px;
+    left: 40px;
+    bottom: 9%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(50%);
 }
